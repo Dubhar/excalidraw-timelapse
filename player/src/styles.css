@@ -1,0 +1,28 @@
+html, body, #root { margin: 0; height: 100%; overflow: hidden; background: #fff; }
+.tl-root { position: relative; width: 100%; height: 100%; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+/* hide every Excalidraw chrome element: this is a viewer, not an editor */
+.tl-root .excalidraw .layer-ui__wrapper,
+.tl-root .excalidraw .scroll-back-to-content,
+.tl-root .excalidraw .disable-zen-mode,
+.tl-root .excalidraw .footer-center { display: none !important; }
+.tl-root .excalidraw { --color-surface-lowest: transparent; }
+
+.tl-bar { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); width: min(880px, 92vw);
+  box-sizing: border-box; padding: 10px 16px 22px; border-radius: 14px; z-index: 10;
+  background: rgba(24,24,27,.88); color: #f4f4f5; backdrop-filter: blur(6px); box-shadow: 0 6px 24px rgba(0,0,0,.25); user-select: none; }
+.tl-title { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+.tl-label { font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.tl-count { font-size: 12px; opacity: .65; font-variant-numeric: tabular-nums; }
+.tl-row { display: flex; align-items: center; gap: 10px; }
+.tl-btn { all: unset; cursor: pointer; width: 30px; height: 30px; border-radius: 8px; text-align: center; line-height: 28px; font-size: 20px; background: rgba(255,255,255,.1); }
+.tl-btn:hover:not(:disabled) { background: rgba(255,255,255,.22); }
+.tl-btn:disabled { opacity: .3; cursor: default; }
+.tl-track-wrap { position: relative; flex: 1; height: 30px; margin: 0 8px; }
+.tl-track { position: absolute; left: 0; right: 0; top: 9px; height: 4px; border-radius: 2px; background: rgba(255,255,255,.2); overflow: hidden; }
+.tl-fill { height: 100%; width: 0; background: #a5a2ff; }
+.tl-dot { all: unset; position: absolute; top: 2px; width: 18px; height: 18px; margin-left: -9px; cursor: pointer; }
+.tl-dot::before { content: ""; position: absolute; inset: 3px; border-radius: 50%; background: #52525b; border: 2px solid #18181b; box-sizing: border-box; transition: transform .15s; }
+.tl-dot.past::before { background: #a5a2ff; } .tl-dot.active::before { background: #fff; transform: scale(1.35); }
+.tl-dot:hover::before { background: #fff; }
+.tl-dot-label { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); font-size: 10.5px; opacity: .7; white-space: nowrap; pointer-events: none; }
+.tl-hint { position: absolute; right: 12px; top: 8px; font-size: 11px; color: #71717a; pointer-events: none; z-index: 5; }

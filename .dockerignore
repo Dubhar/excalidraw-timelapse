@@ -1,0 +1,6 @@
+.git
+player
+examples
+diagram.html
+**/node_modules
+**/__pycache__

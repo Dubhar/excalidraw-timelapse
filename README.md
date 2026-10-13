@@ -56,7 +56,7 @@ Pick whichever you prefer. Both give the same result. 👇
 
 #### 🐳 Option A: with Docker (nothing else to install)
 
-Build the tool once:
+(Optional: Build the tool yourself:)
 
 ```bash
 docker build -t excalidraw-timelapse .
@@ -65,7 +65,7 @@ docker build -t excalidraw-timelapse .
 Then, whenever you want a presentation, point it at your folder:
 
 ```bash
-docker run --rm -v "/path/to/my-snapshots:/data" excalidraw-timelapse
+docker run --rm -v "/path/to/my-snapshots:/data" dubhar/excalidraw-timelapse
 ```
 
 ✅ A fresh `diagram.html` appears in your folder. The container does its job and disappears.
